@@ -635,11 +635,7 @@ if __name__ == "__main__":
     -vf "fps=30,format=yuv420p" ^
     -c:v libx264 -crf 18 -preset medium -movflags +faststart ^
     life_map_bar_2000_2021_1min.mp4
-
-    ・life_map_bar_2000_2021_1min.mp4 → life_preview.gif コマンド
-    </> bat
-    ffmpeg -i life_map_bar_2000_2021_1min.mp4 -vf "fps=10,scale=960:-1:flags=lanczos,palettegen" palette.png
-    ffmpeg -i life_map_bar_2000_2021_1min.mp4 -i palette.png -lavfi "fps=10,scale=960:-1:flags=lanczos[x];[x][1:v]paletteuse" life_preview.gif
+    ・life_map_bar_2000_2021_1min.mp4 → life_preview.gif
     """
     main(update_cache=UPDATE_CACHE)
     # main_race()
